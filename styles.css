@@ -29,7 +29,7 @@ h1 {
 }
 
 .firstp {
-  margin-left: 16px;  
+  margin-left: 16px;
   margin-right: 16px;
   margin-top: 20px;
   font-family: 'Poppins', sans-serif;
@@ -62,18 +62,18 @@ h1 {
   font-weight: 500;
   align-self: center;
   background: #1a2236;
-  border: 0ch;
+  border: 0%;
 }
 
 .start:hover {
-  color:#1a2236;
+  color: #1a2236;
   background: white;
   border: 1px solid;
   border-color: #1a2236;
 }
 
 .start:active {
-  color:#1a2236;
+  color: #1a2236;
   background: white;
   border: 2px solid;
   border-color: #1a2236;
