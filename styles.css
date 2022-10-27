@@ -18,6 +18,7 @@ body {
 }
 
 h1 {
+  margin-left: 16px;
   padding-top: 30px;
   font-family: 'Playfair Display', serif;
   font-style: normal;
@@ -28,6 +29,9 @@ h1 {
 }
 
 .firstp {
+  margin-left: 16px;  
+  margin-right: 16px;
+  margin-top: 20px;
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -41,6 +45,14 @@ h1 {
   flex-direction: column;
 }
 
+.backg {
+  background-image: url("images/image_geometry_2.svg");
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  padding-bottom: 200px;
+  position: static;
+}
+
 .start {
   width: 288px;
   height: 50px;
@@ -50,4 +62,19 @@ h1 {
   font-weight: 500;
   align-self: center;
   background: #1a2236;
+  border: 0ch;
+}
+
+.start:hover {
+  color:#1a2236;
+  background: white;
+  border: 1px solid;
+  border-color: #1a2236;
+}
+
+.start:active {
+  color:#1a2236;
+  background: white;
+  border: 2px solid;
+  border-color: #1a2236;
 }
