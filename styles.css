@@ -175,13 +175,13 @@ h3 {
 }
 
 .start2 {
+  margin-left: 16px;
   width: 288px;
   height: 50px;
   color: white;
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 500;
-  align-self: center;
   background: #1a2236;
   background-image: url(./images/descarga.svg);
   background-repeat: no-repeat;
@@ -249,8 +249,8 @@ h4 {
   margin: 5%;
   background-image: url(./images/cuadrado.svg);
   background-repeat: no-repeat;
-  background-position-x: right;
-  background-position-y: bottom;
+  background-position-x: 195px;
+  background-position-y: 210px;
 }
 
 #languages3 {
@@ -258,6 +258,7 @@ h4 {
   flex-direction: column;
   background-color: #febf52;
   margin: 5%;
+  padding-bottom: 20px;
   background-image: url(./images/bombillo.svg);
   background-repeat: no-repeat;
   background-position-x: right;
