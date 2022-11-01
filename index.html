@@ -176,22 +176,30 @@
                  rem excepturi.</p>
 
                  <form class="form" action="#" target="" method="get" name="formDatosPersonales">
+                    <ul>
+                        <li><label for="text">Your name</label>
+                        <input type="text" name="nombre" id="nombre" required/>
+                         </li>
 
-                    
-                    <input type="text" name="nombre" id="nombre" placeholder="Your name"/>
-                
-                                  
-                    <input type="email" name="email" id="email" placeholder="Your email" required />
-                             
-                    <textarea name="mensaje" for="mensaje" placeholder="Enter your messaje here" maxlength="500"></textarea>
-                    
-                    <button class="start3" type="submit">Start colaboration</button>
+                         <li>
+                        <label for="email">Your email</label>           
+                        <input type="email" name="email" id="email" required />
+                        </li>
+                       
+                         <li>
+                        <textarea name="mensaje" for="mensaje" placeholder="Enter your messaje here" maxlength="500" required></textarea>
+                         </li>
+                    </ul>
+                        
+                        <button class="start3" type="submit">Start colaboration</button>
+
+                   
                 </form>
                        
         </section>
 
         <footer id="footer">
-            
+
                     <button class="union">Get my resume</button>  
                      
                     <Ul class="social">
