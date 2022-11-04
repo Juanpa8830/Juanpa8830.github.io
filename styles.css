@@ -1,4 +1,3 @@
-
 body {
   margin: 0%;
 }
@@ -28,6 +27,14 @@ h1 {
   font-size: 50px;
   line-height: 50px;
   color: #1a2236;
+}
+
+.animated-name {
+  transition: transform 1s;
+}
+
+.animated-name:hover {
+  transform: rotate(360deg);
 }
 
 .firstp,
@@ -383,6 +390,17 @@ textarea {
   padding-top: 40px;
 }
 
+.transform {
+  transition-property: all;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0.05s;
+}
+
+.transform:hover {
+  transform: scale(1.3);
+}
+
 .union,
 .union2 {
   background-image: url(./images/Union.svg);
@@ -436,10 +454,18 @@ textarea {
     font-size: 16px;
     text-decoration: none;
     color: #1a2236;
+    transition-property: all;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in;
+    transition-delay: 0.2s;
   }
 
   .top-a:hover {
     text-decoration: underline;
+    border: 1px solid rgb(163, 134, 134);
+    border-radius: 3px;
+    padding: 3px;
+    box-shadow: 0 0 3px 3px #94cec9;
   }
 
   .backg {
@@ -842,7 +868,7 @@ textarea {
     width: 80%;
   }
 
-  #savedata > li {
+  #savedata>li {
     height: 100px;
     padding-left: 3.5%;
   }
