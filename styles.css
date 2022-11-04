@@ -785,13 +785,15 @@ textarea {
     margin: 0%;
     width: 324px;
   }
-
+  
   #languages4 {
     background-image: url(./images/gridimage.svg);
     background-repeat: no-repeat;
     background-position-y: bottom;
     background-position-x: right;
   }
+
+
 
   #about {
     width: 50%;
@@ -894,6 +896,15 @@ textarea {
     border-radius: 4px;
     padding-left: 5%;
     padding-top: 5%;
+    transition-property:all;
+    transition-duration: 0.3s;
+    transition-timing-function:ease-in-out;
+    transition-delay: 0.1s;
+  }
+
+  form input[type="text"]:hover,
+  form input[type="email"]:hover {
+    transform: scale(1.1);
   }
 
   textarea {
@@ -904,6 +915,13 @@ textarea {
     background: #fff;
     border: 1px solid #dfdfe0;
     border-radius: 4px;
+    transition-property:all;
+    transition-duration: 0.5s;
+    transition-timing-function:ease-in;
+  }
+
+  textarea:hover {
+    transform: rotate(360deg);
   }
 
   .start3 {
