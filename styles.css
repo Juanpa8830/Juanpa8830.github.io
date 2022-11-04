@@ -529,7 +529,8 @@ textarea {
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
-    margin-right: 5px;
+    padding-left: 30%;
+    margin-right: 0%;
   }
 
   .div3 {
@@ -537,7 +538,9 @@ textarea {
     grid-column-end: 13;
     grid-row-start: 2;
     grid-row-end: 3;
-    margin-left: 1%;
+    margin-left: 7.5%;
+    width: 86.5%;
+    margin-top: -13.4%;
   }
 
   .projects1b3 {
@@ -591,7 +594,7 @@ textarea {
     grid-column-end: 4;
     grid-row-start: 3;
     grid-row-end: 4;
-    margin-top: 19%;
+    margin-top: -6.5%;
   }
 
   .div5 {
@@ -599,7 +602,7 @@ textarea {
     grid-column-end: 4;
     grid-row-start: 4;
     grid-row-end: 5;
-    margin-top: -16%;
+    margin-top: -28%;
   }
 
   .div6 {
@@ -607,7 +610,7 @@ textarea {
     grid-column-end: 4;
     grid-row-start: 6;
     grid-row-end: 7;
-    margin-top: -105%;
+    margin-top: -89%;
   }
 
   .div7 {
@@ -615,8 +618,8 @@ textarea {
     grid-column-end: 9;
     grid-row-start: 3;
     grid-row-end: 4;
-    margin-left: -8%;
-    margin-top: -1%;
+    margin-left: -11%;
+    margin-top: -20.3%;
   }
 
   .div9 {
@@ -624,8 +627,9 @@ textarea {
     grid-column-end: 13;
     grid-row-start: 3;
     grid-row-end: 4;
-    margin-top: 6%;
-    margin-left: -16%;
+    margin-top: -14%;
+    margin-left: -24.5%;
+    width: 115%;
   }
 
   .projects1b39 {
@@ -680,8 +684,14 @@ textarea {
     grid-column-end: 13;
     grid-row-start: 4;
     grid-row-end: 5;
-    margin-top: -34%;
-    margin-left: -7.3%;
+    margin-top: -37.3%;
+    margin-left: -16%;
+  }
+
+  .desklap4 {
+    width: 100%;
+    object-fit: cover;
+    height: 51%;
   }
 
   .div11 {
@@ -689,8 +699,8 @@ textarea {
     grid-column-end: 13;
     grid-row-start: 4;
     grid-row-end: 5;
-    margin-top: 28%;
-    margin-left: 23%;
+    margin-top: 21%;
+    margin-left: 24.5%;
   }
 
   .div12 {
@@ -698,8 +708,8 @@ textarea {
     grid-column-end: 8;
     grid-row-start: 4;
     grid-row-end: 5;
-    margin-top: 130%;
-    margin-left: 45%;
+    margin-top: 101%;
+    margin-left: 23%;
   }
 
   .div13 {
@@ -708,7 +718,7 @@ textarea {
     grid-row-start: 5;
     grid-row-end: 6;
     margin-top: -1%;
-    margin-left: 37%;
+    margin-left: 29.5%;
   }
 
   .div14 {
@@ -717,7 +727,7 @@ textarea {
     grid-row-start: 5;
     grid-row-end: 6;
     margin-top: -3%;
-    margin-left: -5%;
+    margin-left: -27%;
   }
 
   #projects-mobile {
@@ -729,7 +739,7 @@ textarea {
     flex-direction: row-reverse;
     margin-top: 8%;
     margin-bottom: 10%;
-    margin-left: 10%;
+    margin-left: 6%;
   }
 
   .langrid {
@@ -834,6 +844,7 @@ textarea {
 
   #savedata > li {
     height: 100px;
+    padding-left: 3.5%;
   }
 
   label {
@@ -841,6 +852,7 @@ textarea {
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     color: #7d7c84;
+    padding: 0%;
   }
 
   form input[type="text"],
@@ -854,13 +866,13 @@ textarea {
     background: #fff;
     border: 1px solid #dfdfe0;
     border-radius: 4px;
-    padding-left: 16px;
+    padding-left: 5%;
     padding-top: 5%;
   }
 
   textarea {
     box-sizing: border-box;
-    width: 190%;
+    width: 193%;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     background: #fff;
