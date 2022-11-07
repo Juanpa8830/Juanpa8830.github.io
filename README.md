@@ -14,7 +14,7 @@ Twitter: @JuanPa8830
 
 LinkedIn: jp3_4@hotmail.com
 
-Portfolio: https://Juanpa8830.github.io/Portfolio-setup-and-mobile-first/
+Portfolio: https://juanpa8830.github.io/Portfolio-setup-and-mobile-first/
 
 
 🤝 Contributing
