@@ -112,6 +112,20 @@ h2 {
   padding-bottom: 10px;
 }
 
+.aboutt {
+  margin-left: 16px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 50px;
+  color: #1a2236;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
 .lap1,
 .lap2,
 .lap3,
@@ -225,7 +239,7 @@ h3 {
   background-position-y: bottom;
 }
 
-h4 {
+.lanframskill {
   width: 116px;
   height: 30px;
   left: 66px;
@@ -313,7 +327,7 @@ label {
   position: absolute;
   font-family: 'Poppins', sans-serif;
   font-size: 10px;
-  color: #7d7c84;
+  color: #2e2e30;
   padding-left: 16px;
   padding-top: 5px;
 }
@@ -765,7 +779,6 @@ textarea {
     flex-direction: row-reverse;
     margin-top: 8%;
     margin-bottom: 10%;
-    margin-left: 6%;
   }
 
   .langrid {
@@ -797,12 +810,13 @@ textarea {
     width: 50%;
   }
 
-  #about h1 {
+  #about h2 {
     font-size: 110px;
     line-height: 100%;
     font-weight: 400 bold;
     margin-top: 50px;
     letter-spacing: 0.001em;
+    margin-left: 20%;
   }
 
   .aboutp {
