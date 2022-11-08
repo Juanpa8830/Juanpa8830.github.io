@@ -112,6 +112,20 @@ h2 {
   padding-bottom: 10px;
 }
 
+.aboutt {
+  margin-left: 16px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 50px;
+  color: #1a2236;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
 .lap1,
 .lap2,
 .lap3,
@@ -225,14 +239,14 @@ h3 {
   background-position-y: bottom;
 }
 
-h4 {
+.lanframskill {
   width: 116px;
   height: 30px;
   left: 66px;
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 800;
-  font-size: 20px;
+  font-size: 25px;
   line-height: 30px;
   color: #fff;
   padding-left: 50px;
@@ -245,7 +259,7 @@ h4 {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 22px;
   line-height: 27px;
   letter-spacing: -0.0525em;
   color: #fff;
@@ -255,7 +269,7 @@ h4 {
 #languages2 {
   display: flex;
   flex-direction: column;
-  background-color: #e2505c;
+  background-color: #df0618;
   margin: 5%;
   background-image: url(./images/cuadrado.svg);
   background-repeat: no-repeat;
@@ -266,7 +280,7 @@ h4 {
 #languages3 {
   display: flex;
   flex-direction: column;
-  background-color: #febf52;
+  background-color: #f09b06;
   margin: 5%;
   padding-bottom: 20px;
   background-image: url(./images/bombillo.svg);
@@ -313,7 +327,7 @@ label {
   position: absolute;
   font-family: 'Poppins', sans-serif;
   font-size: 10px;
-  color: #7d7c84;
+  color: #2e2e30;
   padding-left: 16px;
   padding-top: 5px;
 }
@@ -765,7 +779,6 @@ textarea {
     flex-direction: row-reverse;
     margin-top: 8%;
     margin-bottom: 10%;
-    margin-left: 6%;
   }
 
   .langrid {
@@ -797,12 +810,13 @@ textarea {
     width: 50%;
   }
 
-  #about h1 {
+  #about h2 {
     font-size: 110px;
     line-height: 100%;
     font-weight: 400 bold;
     margin-top: 50px;
     letter-spacing: 0.001em;
+    margin-left: 20%;
   }
 
   .aboutp {
