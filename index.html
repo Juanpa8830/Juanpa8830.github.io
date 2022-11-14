@@ -15,7 +15,7 @@
 
 <body>
 
-    <header class="menu">
+    <header class="menu show_menu">
         <nav>
             <img class="hamb" src="./images/ic_menu.svg" alt="hamburguer">
             <ul class="desk-bar">
@@ -25,9 +25,25 @@
                 <li><a class="top-a" href="#initial2">Contact</a></li>
             </ul>
         </nav>
+
+
     </header>
 
     <main>
+        <section class="hide_menu" id="mobile_menu">
+            <a class="topx" href="#"><img src="./images/xtopmenu.svg" alt=""></a>
+            <img class="topmenu1" src="./images/dotstopmenu1.svg" alt="">
+            <ul class="top_menu">
+                <li><a class="top-a1" href="#greetings">Hello</a></li>
+                <li><a class="top-a2" href="#Projects">Portfolio</a></li>
+                <li><a class="top-a3" href="#mainabout">About</a></li>
+                <li><a class="top-a4" href="#initial2">Contact</a></li>
+            </ul>
+            <img class="topmenu2" src="./images/dotstopmenu1.svg" alt="">
+            <img class="topmenu3" src="./images/bottomtopmenu.svg" alt="" >
+
+        </section>
+
         <section id="greetings">
 
             <div id="initial">
@@ -197,7 +213,7 @@
         </section>
         <section id="mainabout">
             <div id="about">
-                <h2 class="Aboutt">About</h2> 
+                <h2 class="Aboutt">About</h2>
                 <p class="aboutp firstp" role="article">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque doloribus
                     maiores,
                     rem excepturi et exercitationem commodi dolore, veritatis reprehenderit ullam quas, nemo obcaecati
@@ -207,7 +223,7 @@
 
             <div class="langrid">
                 <div id="languages">
-                    <h3 class="lanframskill">Languages</h3> 
+                    <h3 class="lanframskill">Languages</h3>
 
                     <ul class="ul1">
                         <li>JavaScript(ES5/ES6)</li>
@@ -255,7 +271,7 @@
 
             <form class="form" action="https://formspree.io/f/xjvzpoww" method="post">
 
-                <h2 class="GE">Get started</h2> 
+                <h2 class="GE">Get started</h2>
 
                 <p class="firstpGE" role="article">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -310,6 +326,7 @@
 
     </main>
     <footer></footer>
+    <script src="./script.js"></script>
 </body>
 
 </html>

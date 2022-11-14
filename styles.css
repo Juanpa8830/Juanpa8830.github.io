@@ -1,9 +1,73 @@
+#mobile_menu {
+  flex-direction: column;
+  background-image: url(./images/topmobmenu.svg);
+  background-color: #fff;
+  background-position-x: left;
+  background-position-y: top;
+  background-repeat: no-repeat;
+}
+
+.topx {
+  align-self: flex-end;
+  margin: 8% 5%;
+}
+
+.topmenu1 {
+  width: 40px;
+  height: 40px;
+  margin-top: 15%;
+  margin-bottom: 10%;
+  margin-left: 70%;
+}
+
+.show_menu {
+  display: flex;
+}
+
+.hide_menu {
+  display: none;
+}
+
+.top_menu {
+  align-self: center;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 300%;
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.top_menu a {
+  text-decoration: none;
+  color: #000;
+}
+
+.top_menu a:hover {
+  text-decoration: underline;
+  color: #000;
+}
+
+.topmenu2 {
+  width: 40px;
+  height: 40px;
+  margin-left: 15%;
+  margin-top: 20%;
+}
+
+.topmenu3 {
+  width: 100%;
+  margin-top: 10%;
+}
+
 body {
   margin: 0%;
 }
 
 .menu {
-  display: flex;
   background-image: url("./images/image_geometry_1.svg");
   background-repeat: no-repeat;
   margin: 0%;
