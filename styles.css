@@ -1,7 +1,7 @@
 #mobile_menu{
-  /* display: flex; */
   flex-direction: column;
   background-image: url(./images/topmobmenu.svg);
+  background-color: #fff;
   background-position-x:left;
   background-position-y:top;
   background-repeat: no-repeat;
@@ -67,7 +67,6 @@ body {
 }
 
 .menu {
-  display: flex;
   background-image: url("./images/image_geometry_1.svg");
   background-repeat: no-repeat;
   margin: 0%;
@@ -500,10 +499,6 @@ textarea {
 }
 
 @media (min-width: 768px) {
-  /* #mobile_menu{
-    display:none;
-  } */
-
   .hamb {
     display: none;
   }
@@ -1040,9 +1035,6 @@ textarea {
 }
 
 @media (max-width: 768px) {
-  /* #mobile_menu{
-    display:none;
-  } */
   .desk-bar {
     display: none;
   }
