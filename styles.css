@@ -1,5 +1,5 @@
 #mobile_menu{
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   background-image: url(./images/topmobmenu.svg);
   background-position-x:left;
@@ -14,9 +14,17 @@ margin:8% 5%;
 .topmenu1 {
   width: 40px;
   height: 40px;
-  margin-top: 15%; 
+  margin-top: 15%;
   margin-bottom: 10%;
   margin-left: 70%
+}
+
+.show_menu {
+  display: flex;
+}
+
+.hide_menu {
+  display: none;
 }
 
 .top_menu {
@@ -492,9 +500,9 @@ textarea {
 }
 
 @media (min-width: 768px) {
-  #mobile_menu{
+  /* #mobile_menu{
     display:none;
-  }
+  } */
 
   .hamb {
     display: none;
@@ -1032,9 +1040,9 @@ textarea {
 }
 
 @media (max-width: 768px) {
-  #mobile_menu{
+  /* #mobile_menu{
     display:none;
-  }
+  } */
   .desk-bar {
     display: none;
   }
