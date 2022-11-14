@@ -492,7 +492,10 @@ textarea {
 }
 
 @media (min-width: 768px) {
- 
+  #mobile_menu{
+    display:none;
+  }
+
   .hamb {
     display: none;
   }
@@ -1029,7 +1032,9 @@ textarea {
 }
 
 @media (max-width: 768px) {
- 
+  #mobile_menu{
+    display:none;
+  }
   .desk-bar {
     display: none;
   }
