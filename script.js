@@ -105,30 +105,32 @@ let projects = [
 }
 ];
 
-let projectsTitle = document.querySelector('#projects-mobile h2');
+const projectsTitle = document.querySelector('#projects-mobile h2');
 projectsTitle.removeAttribute('class');
 projectsTitle.style.display = 'block';
-let projectsList = document.getElementById('projects-mobile');
-let projectTemplate = document.querySelector('#projects-mobile section');
+const projectsList = document.getElementById('projects-mobile');
+const projectTemplate = document.querySelector('#projects-mobile section');
 
 for (let i=0; i<projects.length; i++){
-  let clonedprojectTemplate = projectTemplate.cloneNode(true);
-  let projectImage = clonedprojectTemplate.querySelector('img');
-  let projectTitle = clonedprojectTemplate.querySelector('.tittle3');
-  let project3Buttons= clonedprojectTemplate.querySelector('.b3');
-  let projectDetails = clonedprojectTemplate.querySelector('.start1');
-
-  projectDetails.setAttribute('data-target', "#".concat(projects[i].id));
+  const clonedprojectTemplate = projectTemplate.cloneNode(true);
+  const projects1b3= clonedprojectTemplate.querySelector('.projects1b3')
+  const projectImage = clonedprojectTemplate.querySelector('img');
+  const projectTitle = clonedprojectTemplate.querySelector('.tittle3');
+  const project3Buttons= clonedprojectTemplate.querySelector('.b3');
+  const SeeButton = document.createElement('button');
+  SeeButton.className="start1";
+  SeeButton.textContent = "See this project →"
+  SeeButton.setAttribute('data-target', "#".concat(projects[i].id));
+  projects1b3.appendChild(SeeButton);
   clonedprojectTemplate.className = "show_mobile";
-  projectImage.setAttribute('src', projects[i].featImage);
+  projectImage.src = projects[i].featImage;
   projectTitle.textContent = projects[i].name;
 
-  let Button = [];
   for (let j=0; j<projects[i].technologies.length; j++){
-    Button[j]=document.createElement('button');
-    Button[j].className="sbutton";
-    Button[j].textContent=projects[i].technologies[j];
-    project3Buttons.appendChild(Button[j]);
+    const Button = document.createElement('button');
+    Button.className="sbutton";
+    Button.textContent=projects[i].technologies[j];
+    project3Buttons.appendChild(Button);
   }
   projectsList.appendChild(clonedprojectTemplate);
 }
