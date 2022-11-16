@@ -36,3 +36,66 @@ libutton4.addEventListener('click', () => {
   mobileMenu.classList.replace('show_menu', 'hide_menu');
   headerMenu.classList.replace('hide_menu', 'show_menu');
 });
+
+
+let projects = {
+project1: {
+  name:"project name goes here",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor  et dolore\
+   magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi  Ut aliquip ex ea commodo consequat. \
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ulabore et dolore magna aliqua. Ut\
+    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi." ,
+  featImage: "./images/lap1.svg",
+  technologies: ["HTML","CSS","JavaScript"],
+  liveLink: "https://juanpa8830.github.io/",
+  sourceLink: "https://github.com/Juanpa8830/Juanpa8830.github.io"
+},
+
+project2: {
+  name:"project2 name goes here",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor  et dolore\
+  magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi  Ut aliquip ex ea commodo consequat. \
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ulabore et dolore magna aliqua. Ut\
+   enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi." ,
+  featImage: "./images/lap2.svg",
+  technologies: ["HTML","CSS","JavaScript"],
+  liveLink: "https://juanpa8830.github.io/",
+  sourceLink: "https://github.com/Juanpa8830/Juanpa8830.github.io"
+},
+
+project3: {
+  name:"project3 name goes here",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor  et dolore\
+  magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi  Ut aliquip ex ea commodo consequat. \
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ulabore et dolore magna aliqua. Ut\
+   enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi." ,
+  featImage: "./images/lap3.svg",
+  technologies: ["HTML","CSS","JavaScript"],
+  liveLink: "https://juanpa8830.github.io/",
+  sourceLink: "https://github.com/Juanpa8830/Juanpa8830.github.io"
+},
+
+project4: {
+  name:"project4 name goes here",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor  et dolore\
+  magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi  Ut aliquip ex ea commodo consequat. \
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ulabore et dolore magna aliqua. Ut\
+   enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi." ,
+  featImage: "./images/lap4.svg",
+  technologies: ["HTML","CSS","JavaScript"],
+  liveLink: "https://juanpa8830.github.io/",
+  sourceLink: "https://github.com/Juanpa8830/Juanpa8830.github.io"
+},
+
+project5: {
+  name:"project5 name goes here",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor  et dolore\
+  magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi  Ut aliquip ex ea commodo consequat. \
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ulabore et dolore magna aliqua. Ut\
+   enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi." ,
+  featImage: "./images/lap5.svg",
+  technologies: ["HTML","CSS","JavaScript"],
+  liveLink: "https://juanpa8830.github.io/",
+  sourceLink: "https://github.com/Juanpa8830/Juanpa8830.github.io"
+}
+}
