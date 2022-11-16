@@ -105,6 +105,8 @@ let projects = [
 }
 ];
 
+
+// generar cards al cargar
 const projectsTitle = document.querySelector('#projects-mobile h2');
 projectsTitle.removeAttribute('class');
 projectsTitle.style.display = 'block';
@@ -133,4 +135,35 @@ for (let i=0; i<projects.length; i++){
     project3Buttons.appendChild(Button);
   }
   projectsList.appendChild(clonedprojectTemplate);
+}
+// generar pop-up window
+const popUpList = document.querySelector('body div');
+const PopWinMobile = document.querySelector('#popwinmobile');
+
+  for (let i=0; i<projects.length; i++){
+  const clonedPopWinMobile = PopWinMobile.cloneNode(true);
+  clonedPopWinMobile.id = projects[i].id;
+  const h2PopWinMobile = clonedPopWinMobile.querySelector('.poph2');
+  h2PopWinMobile.textContent = projects[i].name;
+
+  const project3Buttons= clonedPopWinMobile.querySelector('.b3pop');
+
+
+  for (let j=0; j<projects[i].technologies.length; j++){
+    const Button = document.createElement('button');
+    Button.className="sbuttonpop";
+    Button.textContent=projects[i].technologies[j];
+    project3Buttons.appendChild(Button);
+  }
+  
+  const projectImage = clonedPopWinMobile.querySelector('.popmain');
+  projectImage.src = projects[i].featImage;
+  const pPopWinMobile = clonedPopWinMobile.querySelector('.popp1');
+  pPopWinMobile.textContent=projects[i].description;
+  const b1PopWinMobile = clonedPopWinMobile.querySelector('.popb1');
+  b1PopWinMobile.setAttribute('onclick',`window.location.href=\'${projects[i].liveLink}\';`);
+  const b2PopWinMobile = clonedPopWinMobile.querySelector('.popb2');
+  b2PopWinMobile.setAttribute('onclick',`window.location.href=\'${projects[i].sourceLink}\';`);
+ 
+  popUpList.appendChild(clonedPopWinMobile);
 }

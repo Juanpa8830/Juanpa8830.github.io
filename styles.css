@@ -195,11 +195,12 @@ h2 {
   padding-bottom: 10%;
 }
 
-.popx {
-  align-self: flex-end;
+
+.popx img{
   margin-top: 8%; 
   margin-right: 5%;
   margin-bottom: 0%;
+  padding-left: 85%;
 }
   .poph2 {
   margin-left: 5%;
