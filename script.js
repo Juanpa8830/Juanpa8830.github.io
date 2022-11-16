@@ -47,7 +47,7 @@ let projects = [
    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ulabore et dolore magna aliqua. Ut\
     enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi." ,
   featImage: "./images/lap1.svg",
-  technologies: ["HTML","Ruby on Rails","JavaScript"],
+  technologies: ["HTML","JavaScript","Ruby on Rails"],
   liveLink: "https://juanpa8830.github.io/",
   sourceLink: "https://github.com/Juanpa8830/Juanpa8830.github.io"
 },
@@ -60,7 +60,7 @@ let projects = [
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ulabore et dolore magna aliqua. Ut\
    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi." ,
   featImage: "./images/lap2.svg",
-  technologies: ["HTML","Ruby on Rails","JavaScript"],
+  technologies: ["HTML/CSS","Bootstrap","JavaScript"],
   liveLink: "https://juanpa8830.github.io/",
   sourceLink: "https://github.com/Juanpa8830/Juanpa8830.github.io"
 },
@@ -73,7 +73,7 @@ let projects = [
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ulabore et dolore magna aliqua. Ut\
    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi." ,
   featImage: "./images/lap3.svg",
-  technologies: ["HTML","Ruby on Rails","JavaScript"],
+  technologies: ["HTML","Bootstrap","JavaScript"],
   liveLink: "https://juanpa8830.github.io/",
   sourceLink: "https://github.com/Juanpa8830/Juanpa8830.github.io"
 },
@@ -86,7 +86,7 @@ let projects = [
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ulabore et dolore magna aliqua. Ut\
    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi." ,
   featImage: "./images/lap4.svg",
-  technologies: ["HTML","Ruby on Rails","JavaScript"],
+  technologies: ["HTML/CSS","Ruby on Rails","JavaScript"],
   liveLink: "https://juanpa8830.github.io/",
   sourceLink: "https://github.com/Juanpa8830/Juanpa8830.github.io"
 },
@@ -99,34 +99,36 @@ let projects = [
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ulabore et dolore magna aliqua. Ut\
    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi." ,
   featImage: "./images/lap5.svg",
-  technologies: ["HTML","Ruby on Rails","JavaScript"],
+  technologies: ["HTML","CSS","Ruby on Rails","JavaScript"],
   liveLink: "https://juanpa8830.github.io/",
   sourceLink: "https://github.com/Juanpa8830/Juanpa8830.github.io"
 }
 ];
 
-let projectTemplate = document.getElementById('Projects');
+let projectsTitle = document.querySelector('#projects-mobile h2');
+projectsTitle.removeAttribute('class');
+projectsTitle.style.display = 'block';
 let projectsList = document.getElementById('projects-mobile');
-
-
-
+let projectTemplate = document.querySelector('#projects-mobile section');
 
 for (let i=0; i<projects.length; i++){
   let clonedprojectTemplate = projectTemplate.cloneNode(true);
-  let projectImage = clonedprojectTemplate.getElementsByTagName('img');
+  let projectImage = clonedprojectTemplate.querySelector('img');
   let projectTitle = clonedprojectTemplate.querySelector('.tittle3');
   let project3Buttons= clonedprojectTemplate.querySelector('.b3');
-  
-  clonedprojectTemplate.id = projects[i].id;
+  let projectDetails = clonedprojectTemplate.querySelector('.start1');
+
+  projectDetails.setAttribute('data-target', "#".concat(projects[i].id));
   clonedprojectTemplate.className = "show_mobile";
-  projectImage.sourceLink = projects[i].featImage;
+  projectImage.setAttribute('src', projects[i].featImage);
   projectTitle.textContent = projects[i].name;
-  
+
+  let Button = [];
   for (let j=0; j<projects[i].technologies.length; j++){
-    let Button=document.createElement('button');
-    Button.className="sbutton";
-    Button.textContent=projects[i].technologies[j];
-    project3Buttons.appendChild(Button);
+    Button[j]=document.createElement('button');
+    Button[j].className="sbutton";
+    Button[j].textContent=projects[i].technologies[j];
+    project3Buttons.appendChild(Button[j]);
   }
-  console.log(clonedprojectTemplate);
+  projectsList.appendChild(clonedprojectTemplate);
 }
