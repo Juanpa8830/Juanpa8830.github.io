@@ -38,8 +38,9 @@ libutton4.addEventListener('click', () => {
 });
 
 
-let projects = {
-project1: {
+let projects = [
+ {
+  id:"project1",
   name:"project name goes here",
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor  et dolore\
    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi  Ut aliquip ex ea commodo consequat. \
@@ -51,7 +52,8 @@ project1: {
   sourceLink: "https://github.com/Juanpa8830/Juanpa8830.github.io"
 },
 
-project2: {
+{
+  id:"project2",
   name:"project2 name goes here",
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor  et dolore\
   magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi  Ut aliquip ex ea commodo consequat. \
@@ -63,7 +65,8 @@ project2: {
   sourceLink: "https://github.com/Juanpa8830/Juanpa8830.github.io"
 },
 
-project3: {
+{
+  id:"project3",
   name:"project3 name goes here",
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor  et dolore\
   magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi  Ut aliquip ex ea commodo consequat. \
@@ -75,7 +78,8 @@ project3: {
   sourceLink: "https://github.com/Juanpa8830/Juanpa8830.github.io"
 },
 
-project4: {
+{
+  id:"project4",
   name:"project4 name goes here",
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor  et dolore\
   magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi  Ut aliquip ex ea commodo consequat. \
@@ -87,7 +91,8 @@ project4: {
   sourceLink: "https://github.com/Juanpa8830/Juanpa8830.github.io"
 },
 
-project5: {
+{
+  id:"project5",
   name:"project5 name goes here",
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor  et dolore\
   magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi  Ut aliquip ex ea commodo consequat. \
@@ -98,4 +103,4 @@ project5: {
   liveLink: "https://juanpa8830.github.io/",
   sourceLink: "https://github.com/Juanpa8830/Juanpa8830.github.io"
 }
-}
+]
