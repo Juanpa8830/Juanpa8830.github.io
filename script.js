@@ -47,7 +47,7 @@ let projects = [
    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ulabore et dolore magna aliqua. Ut\
     enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi." ,
   featImage: "./images/lap1.svg",
-  technologies: ["HTML","CSS","JavaScript"],
+  technologies: ["HTML","Ruby on Rails","JavaScript"],
   liveLink: "https://juanpa8830.github.io/",
   sourceLink: "https://github.com/Juanpa8830/Juanpa8830.github.io"
 },
@@ -60,7 +60,7 @@ let projects = [
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ulabore et dolore magna aliqua. Ut\
    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi." ,
   featImage: "./images/lap2.svg",
-  technologies: ["HTML","CSS","JavaScript"],
+  technologies: ["HTML","Ruby on Rails","JavaScript"],
   liveLink: "https://juanpa8830.github.io/",
   sourceLink: "https://github.com/Juanpa8830/Juanpa8830.github.io"
 },
@@ -73,7 +73,7 @@ let projects = [
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ulabore et dolore magna aliqua. Ut\
    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi." ,
   featImage: "./images/lap3.svg",
-  technologies: ["HTML","CSS","JavaScript"],
+  technologies: ["HTML","Ruby on Rails","JavaScript"],
   liveLink: "https://juanpa8830.github.io/",
   sourceLink: "https://github.com/Juanpa8830/Juanpa8830.github.io"
 },
@@ -86,7 +86,7 @@ let projects = [
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ulabore et dolore magna aliqua. Ut\
    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi." ,
   featImage: "./images/lap4.svg",
-  technologies: ["HTML","CSS","JavaScript"],
+  technologies: ["HTML","Ruby on Rails","JavaScript"],
   liveLink: "https://juanpa8830.github.io/",
   sourceLink: "https://github.com/Juanpa8830/Juanpa8830.github.io"
 },
@@ -99,8 +99,34 @@ let projects = [
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ulabore et dolore magna aliqua. Ut\
    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi." ,
   featImage: "./images/lap5.svg",
-  technologies: ["HTML","CSS","JavaScript"],
+  technologies: ["HTML","Ruby on Rails","JavaScript"],
   liveLink: "https://juanpa8830.github.io/",
   sourceLink: "https://github.com/Juanpa8830/Juanpa8830.github.io"
 }
-]
+];
+
+let projectTemplate = document.getElementById('Projects');
+let projectsList = document.getElementById('projects-mobile');
+
+
+
+
+for (let i=0; i<projects.length; i++){
+  let clonedprojectTemplate = projectTemplate.cloneNode(true);
+  let projectImage = clonedprojectTemplate.getElementsByTagName('img');
+  let projectTitle = clonedprojectTemplate.querySelector('.tittle3');
+  let project3Buttons= clonedprojectTemplate.querySelector('.b3');
+  
+  clonedprojectTemplate.id = projects[i].id;
+  clonedprojectTemplate.className = "show_mobile";
+  projectImage.sourceLink = projects[i].featImage;
+  projectTitle.textContent = projects[i].name;
+  
+  for (let j=0; j<projects[i].technologies.length; j++){
+    let Button=document.createElement('button');
+    Button.className="sbutton";
+    Button.textContent=projects[i].technologies[j];
+    project3Buttons.appendChild(Button);
+  }
+  console.log(clonedprojectTemplate);
+}
