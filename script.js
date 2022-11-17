@@ -311,54 +311,37 @@ for (let i=0; i<2; i++){
 }
 
 
-// const s1SeeProject=document.querySelector('.show_mobile.project1');
-// const b1SeeProject = s1SeeProject.querySelector('.start1');
-// const popup1 = document.getElementById('project1');
-// const MobileSec1 = document.querySelector('body div.show_mobile');
+const popupdesk1 = document.querySelector('#popwindesktop #project1' );
+const popupdesk2 = document.querySelector('#popwindesktop #project2' );
+const hiddendeskpop = document.querySelector('body div.hide_desktop');
 
-// b1SeeProject.addEventListener('click', () => {
+SeeButton.addEventListener('click', () => {
 
-//   popup1.classList.replace('hide_mobile', 'show_mobile');
-//   MobileSec1.classList.replace('show_mobile', 'hide_mobile');
-// });
-// const s2SeeProject=document.querySelector('.show_mobile.project2');
-// const b2SeeProject = s2SeeProject.querySelector('.start1');
-// const popup2 = document.getElementById('project2');
-// const MobileSec2 = document.querySelector('body div.show_mobile');
+  popupdesk1.classList.replace('hide_desktop', 'show_desktop');
+  MobileSec1.classList.replace('show_mobile', 'hide_mobile');
+  hiddendeskpop.classList.replace('hide_desktop', 'show_desktop');
+});
 
-// b2SeeProject.addEventListener('click', () => {
+SeeButton2.addEventListener('click', () => {
 
-//   popup2.classList.replace('hide_mobile', 'show_mobile');
-//   MobileSec2.classList.replace('show_mobile', 'hide_mobile');
-// });
-// const s3SeeProject=document.querySelector('.show_mobile.project3');
-// const b3SeeProject = s3SeeProject.querySelector('.start1');
-// const popup3 = document.getElementById('project3');
-// const MobileSec3 = document.querySelector('body div.show_mobile');
+  popupdesk2.classList.replace('hide_desktop', 'show_desktop');
+  MobileSec1.classList.replace('show_mobile', 'hide_mobile');
+  hiddendeskpop.classList.replace('hide_desktop', 'show_desktop');
+});
 
-// b3SeeProject.addEventListener('click', () => {
+// create event for close 'x' buttons of desktop popups
+const closedeskbutton1 = popupdesk1.querySelector('.popxdesk');
+const closedeskbutton2 = popupdesk2.querySelector('.popxdesk');
 
-//   popup3.classList.replace('hide_mobile', 'show_mobile');
-//   MobileSec3.classList.replace('show_mobile', 'hide_mobile');
-//  });
+const listclosedeskbuttons = [closedeskbutton1, closedeskbutton2];
+const listdeskpopups = [popupdesk1,popupdesk2];
 
-// const s4SeeProject=document.querySelector('.show_mobile.project4');
-// const b4SeeProject = s4SeeProject.querySelector('.start1');
-// const popup4 = document.getElementById('project4');
-// const MobileSec4 = document.querySelector('body div.show_mobile');
+for (let i=0; i<listclosedeskbuttons.length; i++){
+  listclosedeskbuttons[i].addEventListener('click', () => {
 
-// b4SeeProject.addEventListener('click', () => {
+    listdeskpopups[i].classList.replace('show_desktop','hide_desktop');
+    MobileSec1.classList.replace('hide_mobile', 'show_mobile');
+  hiddendeskpop.classList.replace('show_desktop','hide_desktop');
 
-//   popup4.classList.replace('hide_mobile', 'show_mobile');
-//   MobileSec4.classList.replace('show_mobile', 'hide_mobile');
-// });
-
-// const s5SeeProject=document.querySelector('.show_mobile.project5');
-// const b5SeeProject = s5SeeProject.querySelector('.start1');
-// const popup5 = document.getElementById('project5');
-// const MobileSec5 = document.querySelector('body div.show_mobile');
-
-// b5SeeProject.addEventListener('click', () => {
-
-//   popup5.classList.replace('hide_mobile', 'show_mobile');
-//   MobileSec5.classList.replace('show_mobile', 'hide_mobile');
+});
+}
