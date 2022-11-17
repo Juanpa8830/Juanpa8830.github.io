@@ -89,6 +89,9 @@ const projects = [
   },
 ];
 
+// content = ``;
+// document.getElementById('dynamic').innerHTML=content;
+
 // generar cards al cargar
 const projectsTitle = document.querySelector('#projects-mobile h2');
 projectsTitle.removeAttribute('class');
