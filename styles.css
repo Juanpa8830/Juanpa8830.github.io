@@ -197,7 +197,7 @@ h2 {
 
 
 .popx img{
-  margin-top: 8%; 
+  margin-top: 8%;
   margin-right: 5%;
   margin-bottom: 0%;
   padding-left: 85%;
@@ -212,7 +212,7 @@ h2 {
   line-height: 80%;
   color: #1a2236;
   margin-bottom: 2%;
-  
+
 }
 
 .projects1b3pop {
@@ -225,7 +225,7 @@ h2 {
   display: flex;
   padding: 0%;
   margin-left: 6%;
-} 
+}
 
 .sbuttonpop {
   row-gap: 1%;
@@ -255,8 +255,8 @@ margin-top: 5%;
   margin-left: 5%;
   margin-right: 5%;
   column-gap: 0%;
-  
-  
+
+
 }
 
 .popp1, .popp2 {
@@ -299,7 +299,7 @@ margin-top: 5%;
   background-repeat: no-repeat;
   background-position-x: 90%;
   background-position-y: 45%;
-  
+
 }
 
 .hide_desktop {
@@ -328,10 +328,10 @@ margin-top: 5%;
 }
 
 .popxdesk {
-  
-  margin-top: 7%; 
+
+  margin-top: 7%;
   margin-right: 5%;
- 
+
 }
   .poph2desk {
   margin-left: 5%;
@@ -356,7 +356,7 @@ margin-top: 5%;
   padding: 0%;
   column-gap: 2%;
   margin-bottom: -1%;
-} 
+}
 
 .sbuttonpopdesk {
   height: 40px;
@@ -401,7 +401,7 @@ width: 90%;
   line-height: 27px;
   font-weight: 400;
   color: #1a2236;
-  
+
 }
 
 .deskbuttons {
@@ -412,7 +412,7 @@ width: 90%;
   column-gap: 2%;
 }
 .popb1desk {
-  
+
   width: 246px;
   height: 44px;
   color: #1a2236;
@@ -431,29 +431,29 @@ width: 90%;
 .popb1desk:hover {
   color: white;
   background: #1A2236;
-  border: 1px solid #1a2236; 
+  border: 1px solid #1a2236;
 }
 
 .popb1desk:active {
   color: white;
   background: #1A2236;
-  border: 1px solid #1a2236; 
+  border: 1px solid #1a2236;
 }
 
 .popb2desk:hover {
   color: white;
   background: #1A2236;
-  border: 1px solid #1a2236; 
+  border: 1px solid #1a2236;
 }
 
 .popb2desk:active {
   color: white;
   background: #1A2236;
-  border: 1px solid #1a2236; 
+  border: 1px solid #1a2236;
 }
 
 .popb2desk {
-  
+
   width: 246px;
   height: 44px;
   color: #1a2236;
@@ -467,7 +467,7 @@ width: 90%;
   background-repeat: no-repeat;
   background-position-x: 90%;
   background-position-y: 45%;
-  
+
 }
 
 
