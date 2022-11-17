@@ -475,37 +475,36 @@ h2 {
   column-gap: 30%;
 }
 
-.anch1desk{
-width: 100%;
-padding-left: 6%;
-font-family: 'Poppins', sans-serif;
-font-style: normal;
-font-weight: 300;
-font-size: 18px;
-line-height: 27px;
-color: #1A2236;
-text-decoration: none;
-background-image: url(./images/leftarrow.svg);
-background-repeat: no-repeat;
-background-position-x: 2%;
-background-position-y: 40%;
+.anch1desk {
+  width: 100%;
+  padding-left: 6%;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 27px;
+  color: #1a2236;
+  text-decoration: none;
+  background-image: url(./images/leftarrow.svg);
+  background-repeat: no-repeat;
+  background-position-x: 2%;
+  background-position-y: 40%;
 }
 
-.anch2desk{
+.anch2desk {
   width: 100%;
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 18px;
   line-height: 27px;
-  color: #1A2236;
+  color: #1a2236;
   text-decoration: none;
   background-image: url(./images/rightarrow.svg);
   background-repeat: no-repeat;
   background-position-x: 57%;
   background-position-y: 40%;
-  }
-
+}
 
 .aboutt {
   margin-left: 16px;
