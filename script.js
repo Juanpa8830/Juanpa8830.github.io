@@ -89,39 +89,91 @@ const projects = [
   },
 ];
 
-// content = ``;
-// document.getElementById('dynamic').innerHTML=content;
-
-// generar cards al cargar
-const projectsTitle = document.querySelector('#projects-mobile h2');
-projectsTitle.removeAttribute('class');
-projectsTitle.style.display = 'block';
-const projectsList = document.getElementById('projects-mobile');
-const projectTemplate = document.querySelector('#projects-mobile section');
-
-for (let i = 0; i < projects.length; i += 1) {
-  const clonedprojectTemplate = projectTemplate.cloneNode(true);
-  const projects1b3 = clonedprojectTemplate.querySelector('.projects1b3');
-  const projectImage = clonedprojectTemplate.querySelector('img');
-  const projectTitle = clonedprojectTemplate.querySelector('.tittle3');
-  const project3Buttons = clonedprojectTemplate.querySelector('.b3');
-  const SeeButton = document.createElement('button');
-  SeeButton.className = 'start1';
-  SeeButton.textContent = 'See this project →';
-  SeeButton.setAttribute('data-target', '#'.concat(projects[i].id));
-  projects1b3.appendChild(SeeButton);
-  clonedprojectTemplate.className = `show_mobile ${projects[i].id}`;
-  projectImage.src = projects[i].featImage;
-  projectTitle.textContent = projects[i].name;
-
-  for (let j = 0; j < projects[i].technologies.length; j += 1) {
+// generate technologies buttons
+function generateTechButtons(technologies){
+  const ButtonList = document.createElement('ul');
+  for (let j = 0; j < technologies.length; j += 1) {
     const Button = document.createElement('button');
     Button.className = 'sbutton';
-    Button.textContent = projects[i].technologies[j];
-    project3Buttons.appendChild(Button);
+    Button.textContent = technologies[j];
+    ButtonList.appendChild(Button);
   }
-  projectsList.appendChild(clonedprojectTemplate);
+  return ButtonList.innerHTML;
 }
+
+// generate mobile cards dynamically
+
+const projectsList = document.getElementById('projects-mobile');
+projectsList.innerHTML+='<h2 class="show_mobile" style="display:block">Projects</h2>';
+
+for (let i = 0; i < projects.length; i += 1) {
+  let cardMobileTemplate=`
+  
+  <section class="show_mobile ${projects[i].id}">
+      <img class="lap1" src="${projects[i].featImage}" alt="">
+        <div class="projects1b3">
+
+           <h3 class="tittle3">${projects[i].name}</h3>
+
+          <ul class="b3">${generateTechButtons(projects[i].technologies)}
+          </ul>
+          <button class="start1" onclick="showpopup('mobile',${projects[i].id})">See this project →</button>
+
+        </div>
+  </section>`;
+
+  projectsList.innerHTML+=cardMobileTemplate;
+}
+
+// Generate Desktop Cards Dynamically
+
+const projectDeskList = document.querySelector('#projects-desktop');
+const projectdeskcards =`
+  <div class="div1">
+  <h2 class="deskt1">Projects</h2>
+  </div>
+
+  <div class="div2"><img class="deskdots1" src="./images/image_dots.svg" alt=""></div>
+  <div class="div3">
+  <div class="projects1b3">
+      <div>
+          <h3 class="tittle3">${projects[0].name}</h3>
+
+          <div class="b3">
+          ${generateTechButtons(projects[0].technologies)}
+          </div>
+          <button class="start1" onclick="showpopup('mobile',${projects[0].id})">See this project →</button>
+      </div>
+  </div>
+  </div>
+
+  <div class="div4"><img class="desklap2" src="./images/desclap2.svg" alt=""></div>
+  <div class="div5"><img class="desklap3" src="./images/desklap3.svg" alt=""></div>
+  <div class="div6"><img class="deskgeometry1" src="./images/deskgeometry1.svg" alt=""></div>
+  <div class="div7"><img class="deskgeometry2" src="./images/deskgeometry2.svg" alt=""></div>
+
+  <div class="div9">
+  <div class="projects1b39">
+      <div>
+          <h3 class="tittle39">${projects[1].name}</h3>
+
+          <div class="b39">
+          ${generateTechButtons(projects[1].technologies)}
+          </div>
+          
+          <button class="start1" onclick="showpopup('mobile',${projects[1].id})">See this project →</button>
+      </div>
+  </div>
+  </div>
+
+  <div class="div10"><img class="desklap4" src="${projects[1].featImage}" alt=""></div>
+  <div class="div11"><img class="deskgeometry3" src="./images/deskgeometry3.svg" alt=""></div>
+  <div class="div12"><img class="deskgeometry4" src="./images/deskgeometry4.svg" alt=""></div>
+  <div class="div13"><img class="desklap5" src="./images/desklap5.svg" alt=""></div>
+  <div class="div14"><img class="deskgeometry5" src="./images/deskgeometry5.svg" alt=""></div>
+`
+projectDeskList.innerHTML+=projectdeskcards;
+
 // generar pop-up window mobile
 const popUpList = document.querySelector('body section');
 const PopWinMobile = popUpList.querySelector('div.hide_mobile');
@@ -215,47 +267,7 @@ for (let i = 0; i < listclosebuttons.length; i += 1) {
   });
 }
 
-// Generate Desktop Cards Dynamically
-// First project
-const project1Desk = document.querySelector('#projects-desktop div.projects1b3 div');
-const project1DeskTitle = project1Desk.querySelector('.tittle3');
-project1DeskTitle.textContent = projects[0].name;
 
-const project1Desktop3Buttons = project1Desk.querySelector('.b3');
-for (let j = 0; j < projects[0].technologies.length; j += 1) {
-  const Button = document.createElement('button');
-  Button.className = 'sbutton';
-  Button.textContent = projects[0].technologies[j];
-  project1Desktop3Buttons.appendChild(Button);
-}
-
-const SeeButton = document.createElement('button');
-SeeButton.className = 'start1';
-SeeButton.textContent = 'See this project →';
-SeeButton.setAttribute('data-target', '#'.concat(projects[0].id));
-project1Desk.appendChild(SeeButton);
-
-// Second project
-const project2Desk = document.querySelector('#projects-desktop div.projects1b39 div');
-const project2DeskTitle = project2Desk.querySelector('.tittle39');
-project2DeskTitle.textContent = projects[1].name;
-
-const project2Desktop3Buttons = project2Desk.querySelector('.b39');
-for (let j = 0; j < projects[1].technologies.length; j += 1) {
-  const Button = document.createElement('button');
-  Button.className = 'sbutton9';
-  Button.textContent = projects[1].technologies[j];
-  project2Desktop3Buttons.appendChild(Button);
-}
-
-const SeeButton2 = document.createElement('button');
-SeeButton2.className = 'start19';
-SeeButton2.textContent = 'See this project →';
-SeeButton2.setAttribute('data-target', '#'.concat(projects[1].id));
-project2Desk.appendChild(SeeButton2);
-
-const project2DeskImage = document.querySelector('#projects-desktop div.div10 img');
-project2DeskImage.src = projects[1].featImage;
 
 // Generate PopUp Desktop Windows
 const popUpDeskList = document.querySelector('#popwindesktop');
