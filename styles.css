@@ -185,26 +185,26 @@ h2 {
 }
 
 #popwinmobile {
-  display:flex;
+  display: flex;
   flex-direction: column;
   position: absolute;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   background-color: #fff;
   z-index: 1;
   padding-bottom: 10%;
 }
 
-
-.popx img{
+.popx img {
   margin-top: 8%;
   margin-right: 5%;
   margin-bottom: 0%;
   padding-left: 85%;
 }
-  .poph2 {
+
+.poph2 {
   margin-left: 5%;
-  margin-top:1%;
+  margin-top: 1%;
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 900;
@@ -212,13 +212,12 @@ h2 {
   line-height: 80%;
   color: #1a2236;
   margin-bottom: 2%;
-
 }
 
 .projects1b3pop {
   display: flex;
   flex-direction: column;
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 .b3pop {
@@ -242,10 +241,9 @@ h2 {
 }
 
 .popmain {
-margin-left: 5%;
-margin-right: 5%;
-margin-top: 5%;
-
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
 }
 
 .ima4pop {
@@ -255,11 +253,10 @@ margin-top: 5%;
   margin-left: 5%;
   margin-right: 5%;
   column-gap: 0%;
-
-
 }
 
-.popp1, .popp2 {
+.popp1,
+.popp2 {
   margin: 5%;
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
@@ -267,6 +264,7 @@ margin-top: 5%;
   font-weight: 400;
   color: #1a2236;
 }
+
 .popb1 {
   align-self: center;
   width: 246px;
@@ -299,7 +297,6 @@ margin-top: 5%;
   background-repeat: no-repeat;
   background-position-x: 90%;
   background-position-y: 45%;
-
 }
 
 .hide_desktop {
@@ -318,6 +315,7 @@ margin-top: 5%;
 
 .interndesk {
   background-color: #fff;
+
   /* display: flex; */
   flex-direction: column;
 }
@@ -328,26 +326,25 @@ margin-top: 5%;
 }
 
 .popxdesk {
-
   margin-top: 7%;
   margin-right: 5%;
-
 }
-  .poph2desk {
+
+.poph2desk {
   margin-left: 5%;
-  margin-top:5%;
+  margin-top: 5%;
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 60px;
   line-height: 80%;
-  color: #1A2236;
+  color: #1a2236;
 }
 
 .projects1b3popdesk {
   display: flex;
   flex-direction: column;
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 .b3popdesk {
@@ -366,16 +363,16 @@ margin-top: 5%;
   font-weight: 300;
   font-size: 20px;
   line-height: 80%;
-  color: #1A2236;
+  color: #1a2236;
   text-align: center;
   box-sizing: border-box;
 }
 
 .popmaindesk {
-margin-left: 5%;
-margin-right: 5%;
-margin-top: 5%;
-width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+  width: 90%;
 }
 
 .ima4popdesk {
@@ -389,10 +386,11 @@ width: 90%;
 }
 
 .littledesk {
-  width:80%;
+  width: 80%;
 }
 
-.popp1desk, .popp2desk {
+.popp1desk,
+.popp2desk {
   padding-left: 27%;
   padding-right: 23%;
   align-self: center;
@@ -401,7 +399,6 @@ width: 90%;
   line-height: 27px;
   font-weight: 400;
   color: #1a2236;
-
 }
 
 .deskbuttons {
@@ -411,8 +408,8 @@ width: 90%;
   margin-bottom: 15%;
   column-gap: 2%;
 }
-.popb1desk {
 
+.popb1desk {
   width: 246px;
   height: 44px;
   color: #1a2236;
@@ -430,30 +427,17 @@ width: 90%;
 
 .popb1desk:hover {
   color: white;
-  background: #1A2236;
+  background: #1a2236;
   border: 1px solid #1a2236;
 }
 
 .popb1desk:active {
   color: white;
-  background: #1A2236;
-  border: 1px solid #1a2236;
-}
-
-.popb2desk:hover {
-  color: white;
-  background: #1A2236;
-  border: 1px solid #1a2236;
-}
-
-.popb2desk:active {
-  color: white;
-  background: #1A2236;
+  background: #1a2236;
   border: 1px solid #1a2236;
 }
 
 .popb2desk {
-
   width: 246px;
   height: 44px;
   color: #1a2236;
@@ -467,9 +451,19 @@ width: 90%;
   background-repeat: no-repeat;
   background-position-x: 90%;
   background-position-y: 45%;
-
 }
 
+.popb2desk:hover {
+  color: white;
+  background: #1a2236;
+  border: 1px solid #1a2236;
+}
+
+.popb2desk:active {
+  color: white;
+  background: #1a2236;
+  border: 1px solid #1a2236;
+}
 
 .aboutt {
   margin-left: 16px;
@@ -1354,5 +1348,4 @@ textarea {
   #projects-desktop {
     display: none;
   }
-
 }
