@@ -279,36 +279,38 @@ project2Desk.appendChild(SeeButton2);
 const project2DeskImage = document.querySelector('#projects-desktop div.div10 img');
 project2DeskImage.src = projects[1].featImage;
 
-// // generar pop-up window en desktop
-// const popUpList = document.querySelector('body section');
-// const PopWinMobile = popUpList.querySelector('div.hide_mobile');
+// Generate PopUp Desktop Windows
+const popUpDeskList = document.querySelector('#popwindesktop');
+const popUpDeskTemplate = popUpDeskList.querySelector('div.interndesk');
 
-//   for (let i=0; i<projects.length; i++){
-//   const clonedPopWinMobile = PopWinMobile.cloneNode(true);
-//   clonedPopWinMobile.id = projects[i].id;
-//   const h2PopWinMobile = clonedPopWinMobile.querySelector('.poph2');
-//   h2PopWinMobile.textContent = projects[i].name;
+for (let i=0; i<2; i++){
+  const clonedPopUpDesk = popUpDeskTemplate.cloneNode(true);
+  clonedPopUpDesk.id = projects[i].id;
+  const h2PopDesk = clonedPopUpDesk.querySelector('.poph2desk');
+  h2PopDesk.textContent = projects[i].name;
 
-//   const project3Buttons= clonedPopWinMobile.querySelector('.b3pop');
+  const project3Buttons= clonedPopUpDesk.querySelector('.b3popdesk');
+  for (let j=0; j<projects[i].technologies.length; j++){
+    const Button = document.createElement('button');
+    Button.className="sbuttonpopdesk";
+    Button.textContent=projects[i].technologies[j];
+    project3Buttons.appendChild(Button);
+  }
+
+  const projectImage = clonedPopUpDesk.querySelector('.popmaindesk');
+  projectImage.src = projects[i].featImage;
+  const pPopWinDesk = clonedPopUpDesk.querySelector('.popp1desk');
+  pPopWinDesk.textContent=projects[i].description;
+
+  const b1PopWinDesk = clonedPopUpDesk.querySelector('.popb1desk');
+  b1PopWinDesk.setAttribute('onclick',`window.location.href=\'${projects[i].liveLink}\';`);
+  const b2PopWinDesk = clonedPopUpDesk.querySelector('.popb2desk');
+  b2PopWinDesk.setAttribute('onclick',`window.location.href=\'${projects[i].sourceLink}\';`);
+
+  popUpDeskList.appendChild(clonedPopUpDesk);
+}
 
 
-//   for (let j=0; j<projects[i].technologies.length; j++){
-//     const Button = document.createElement('button');
-//     Button.className="sbuttonpop";
-//     Button.textContent=projects[i].technologies[j];
-//     project3Buttons.appendChild(Button);
-//   }
-
-//   const projectImage = clonedPopWinMobile.querySelector('.popmain');
-//   projectImage.src = projects[i].featImage;
-//   const pPopWinMobile = clonedPopWinMobile.querySelector('.popp1');
-//   pPopWinMobile.textContent=projects[i].description;
-//   const b1PopWinMobile = clonedPopWinMobile.querySelector('.popb1');
-//   b1PopWinMobile.setAttribute('onclick',`window.location.href=\'${projects[i].liveLink}\';`);
-//   const b2PopWinMobile = clonedPopWinMobile.querySelector('.popb2');
-//   b2PopWinMobile.setAttribute('onclick',`window.location.href=\'${projects[i].sourceLink}\';`);
-//    popUpList.appendChild(clonedPopWinMobile);
-// }
 // const s1SeeProject=document.querySelector('.show_mobile.project1');
 // const b1SeeProject = s1SeeProject.querySelector('.start1');
 // const popup1 = document.getElementById('project1');
