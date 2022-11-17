@@ -318,7 +318,7 @@ margin-top: 5%;
 
 .interndesk {
   background-color: #fff;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
 }
 
