@@ -90,7 +90,7 @@ const projects = [
 ];
 
 // generate technologies buttons
-function generateTechButtons(technologies){
+function generateTechButtons(technologies) {
   const ButtonList = document.createElement('ul');
   for (let j = 0; j < technologies.length; j += 1) {
     const Button = document.createElement('button');
@@ -104,10 +104,10 @@ function generateTechButtons(technologies){
 // generate mobile cards dynamically
 
 const projectsList = document.getElementById('projects-mobile');
-projectsList.innerHTML+='<h2 class="show_mobile" style="display:block">Projects</h2>';
+projectsList.innerHTML += '<h2 class="show_mobile" style="display:block">Projects</h2>';
 
 for (let i = 0; i < projects.length; i += 1) {
-  let cardMobileTemplate=`
+  const cardMobileTemplate = `
   
   <section class="show_mobile ${projects[i].id}">
       <img class="lap1" src="${projects[i].featImage}" alt="">
@@ -117,18 +117,18 @@ for (let i = 0; i < projects.length; i += 1) {
 
           <ul class="b3">${generateTechButtons(projects[i].technologies)}
           </ul>
-          <button class="start1" onclick="showpopup('mobile',${projects[i].id})">See this project →</button>
+          <button class="start1" onclick="showpopup('mobile','${projects[i].id}')">See this project →</button>
 
         </div>
   </section>`;
 
-  projectsList.innerHTML+=cardMobileTemplate;
+  projectsList.innerHTML += cardMobileTemplate;
 }
 
 // Generate Desktop Cards Dynamically
 
 const projectDeskList = document.querySelector('#projects-desktop');
-const projectdeskcards =`
+const projectdeskcards = `
   <div class="div1">
   <h2 class="deskt1">Projects</h2>
   </div>
@@ -142,7 +142,7 @@ const projectdeskcards =`
           <div class="b3">
           ${generateTechButtons(projects[0].technologies)}
           </div>
-          <button class="start1" onclick="showpopup('mobile',${projects[0].id})">See this project →</button>
+          <button class="start1" onclick="showpopup('desktop','${projects[0].id}');">See this project →</button>
       </div>
   </div>
   </div>
@@ -161,7 +161,7 @@ const projectdeskcards =`
           ${generateTechButtons(projects[1].technologies)}
           </div>
           
-          <button class="start1" onclick="showpopup('mobile',${projects[1].id})">See this project →</button>
+          <button class="start1" onclick="showpopup('desktop','${projects[1].id}')">See this project →</button>
       </div>
   </div>
   </div>
@@ -171,162 +171,115 @@ const projectdeskcards =`
   <div class="div12"><img class="deskgeometry4" src="./images/deskgeometry4.svg" alt=""></div>
   <div class="div13"><img class="desklap5" src="./images/desklap5.svg" alt=""></div>
   <div class="div14"><img class="deskgeometry5" src="./images/deskgeometry5.svg" alt=""></div>
-`
-projectDeskList.innerHTML+=projectdeskcards;
+`;
+projectDeskList.innerHTML += projectdeskcards;
 
-// generar pop-up window mobile
-const popUpList = document.querySelector('body section');
-const PopWinMobile = popUpList.querySelector('div.hide_mobile');
-
-for (let i = 0; i < projects.length; i += 1) {
-  const clonedPopWinMobile = PopWinMobile.cloneNode(true);
-  clonedPopWinMobile.id = projects[i].id;
-  const h2PopWinMobile = clonedPopWinMobile.querySelector('.poph2');
-  h2PopWinMobile.textContent = projects[i].name;
-
-  const project3Buttons = clonedPopWinMobile.querySelector('.b3pop');
-
-  for (let j = 0; j < projects[i].technologies.length; j += 1) {
-    const Button = document.createElement('button');
-    Button.className = 'sbuttonpop';
-    Button.textContent = projects[i].technologies[j];
-    project3Buttons.appendChild(Button);
+function getproject(id) {
+  for (let i = 0; i < projects.length; i += 1) {
+    if (projects[i].id === id) {
+      return projects[i];
+    }
   }
-
-  const projectImage = clonedPopWinMobile.querySelector('.popmain');
-  projectImage.src = projects[i].featImage;
-  const pPopWinMobile = clonedPopWinMobile.querySelector('.popp1');
-  pPopWinMobile.textContent = projects[i].description;
-  const b1PopWinMobile = clonedPopWinMobile.querySelector('.popb1');
-  b1PopWinMobile.setAttribute('onclick', `window.location.href='${projects[i].liveLink}';`);
-  const b2PopWinMobile = clonedPopWinMobile.querySelector('.popb2');
-  b2PopWinMobile.setAttribute('onclick', `window.location.href='${projects[i].sourceLink}';`);
-  popUpList.appendChild(clonedPopWinMobile);
+  return false;
 }
-const s1SeeProject = document.querySelector('.show_mobile.project1');
-const b1SeeProject = s1SeeProject.querySelector('.start1');
-const popup1 = document.getElementById('project1');
-const MobileSec1 = document.querySelector('body div.show_mobile');
 
-b1SeeProject.addEventListener('click', () => {
-  popup1.classList.replace('hide_mobile', 'show_mobile');
-  MobileSec1.classList.replace('show_mobile', 'hide_mobile');
-});
-const s2SeeProject = document.querySelector('.show_mobile.project2');
-const b2SeeProject = s2SeeProject.querySelector('.start1');
-const popup2 = document.getElementById('project2');
-const MobileSec2 = document.querySelector('body div.show_mobile');
+// generar pop-up windows mobile/desktop
+function showpopup(version, id) {
+  const project = getproject(id);
+  const popuptemplates = {
+    mobile: `
+    <div class="hide_mobile" id="${project.id}">
+        <a class="popx" href="#" onclick="closepopup('mobile','${project.id}');">
+        <img src="./images/popupx.svg" alt=""></a>
+        <h2 class="poph2">${project.name}</h2>
 
-b2SeeProject.addEventListener('click', () => {
-  popup2.classList.replace('hide_mobile', 'show_mobile');
-  MobileSec2.classList.replace('show_mobile', 'hide_mobile');
-});
-const s3SeeProject = document.querySelector('.show_mobile.project3');
-const b3SeeProject = s3SeeProject.querySelector('.start1');
-const popup3 = document.getElementById('project3');
-const MobileSec3 = document.querySelector('body div.show_mobile');
+        <div class="projects1b3pop">
+            <ul class="b3pop">
+            ${generateTechButtons(project.technologies)}
+            </ul>
 
-b3SeeProject.addEventListener('click', () => {
-  popup3.classList.replace('hide_mobile', 'show_mobile');
-  MobileSec3.classList.replace('show_mobile', 'hide_mobile');
-});
+            <img class="popmain" src="${project.featImage}" alt="">
+            <ul class="ima4pop">
+                <img class="little" src="./images/smalllappop.svg" alt="">
+                <img class="little" src="./images/smalllappop.svg" alt="">
+                <img class="little" src="./images/smalllappop.svg" alt="">
+                <img class="little" src="./images/smalllappop.svg" alt="">
+            </ul>
 
-const s4SeeProject = document.querySelector('.show_mobile.project4');
-const b4SeeProject = s4SeeProject.querySelector('.start1');
-const popup4 = document.getElementById('project4');
-const MobileSec4 = document.querySelector('body div.show_mobile');
+            <p class="popp1">${project.description}</p>
+            <p class="popp2">Description of projects features and details.</p>
 
-b4SeeProject.addEventListener('click', () => {
-  popup4.classList.replace('hide_mobile', 'show_mobile');
-  MobileSec4.classList.replace('show_mobile', 'hide_mobile');
-});
+            <button class="popb1" onclick="window.location.href='${project.liveLink}';">See Live</button>
+            <button class="popb2" onclick="window.location.href='${project.sourceLink}';">See Source</button>
 
-const s5SeeProject = document.querySelector('.show_mobile.project5');
-const b5SeeProject = s5SeeProject.querySelector('.start1');
-const popup5 = document.getElementById('project5');
-const MobileSec5 = document.querySelector('body div.show_mobile');
+        </div>
+    </div>`,
+    desktop: `
+      <div class="interndesk hide_desktop id="${project.id}">
+          <div class="topdesk">
+            <h2 class="poph2desk">${project.name}</h2>
+            <a class="popxdesk" href="#" onclick="closepopup('desktop','${project.id}');"><img src="./images/deskcross.svg" alt=""></a>
+          </div>
 
-b5SeeProject.addEventListener('click', () => {
-  popup5.classList.replace('hide_mobile', 'show_mobile');
-  MobileSec5.classList.replace('show_mobile', 'hide_mobile');
-});
+      <div class="projects1b3popdesk">
+          <ul class="b3popdesk">
+          ${generateTechButtons(project.technologies)}
+          </ul>
+
+          <img class="popmaindesk" src="${project.featImage}" alt="">
+          <ul class="ima4popdesk">
+              <img class="littledesk" src="./images/littledesk.svg" alt="">
+              <img class="littledesk" src="./images/littledesk.svg" alt="">
+              <img class="littledesk" src="./images/littledesk.svg" alt="">
+              <img class="littledesk" src="./images/littledesk.svg" alt="">
+          </ul>
+
+          <p class="popp1desk">${project.description}</p>
+          <p class="popp2desk">Description of projects features and details.</p>
+          <div class="deskbuttons">
+              <button class="popb1desk" onclick="window.location.href='${project.liveLink}';">See Live</button>
+              <button class="popb2desk" onclick="window.location.href='${project.sourceLink}';">See Source</button>
+          </div>
+          <div class="deskbottomanchors">
+              <a class="anch1desk" href="#">previous project</a>
+              <a class="anch2desk" href="#">Next project</a>
+          </div>
+
+      </div>
+    </div>`,
+  };
+  const popUpmobileList = document.querySelector('body section');
+  const popUpDeskList = document.querySelector('#popwindesktop');
+  const contentSection = document.querySelector('body div.show_mobile');
+
+  contentSection.classList.replace('show_mobile', 'hide_mobile');
+  if (version === 'mobile') {
+    popUpmobileList.innerHTML += popuptemplates.mobile;
+    const projectpopupmobile = document.querySelector(`#${project.id}`);
+    projectpopupmobile.classList.replace('hide_mobile', 'show_mobile');
+  } else {
+    popUpDeskList.innerHTML += popuptemplates.desktop;
+    const projectpopupdesktop = document.querySelector('#popwindesktop .interndesk');
+    projectpopupdesktop.classList.replace('hide_desktop', 'show_desktop');
+    const activepopupdesktop = document.querySelector('body div.hide_desktop');
+    activepopupdesktop.classList.replace('hide_desktop', 'show_desktop');
+  }
+}
+showpopup();
+
 // create event for close 'x' buttons of popups
-const closebutton1 = document.querySelector('#popwinmobile #project1 .popx');
-const closebutton2 = document.querySelector('#popwinmobile #project2 .popx');
-const closebutton3 = document.querySelector('#popwinmobile #project3 .popx');
-const closebutton4 = document.querySelector('#popwinmobile #project4 .popx');
-const closebutton5 = document.querySelector('#popwinmobile #project5 .popx');
-
-const listclosebuttons = [closebutton1, closebutton2, closebutton3, closebutton4, closebutton5];
-const listpopups = [popup1, popup2, popup3, popup4, popup5];
-const listMobileSecs = [MobileSec1, MobileSec2, MobileSec3, MobileSec4, MobileSec5];
-for (let i = 0; i < listclosebuttons.length; i += 1) {
-  listclosebuttons[i].addEventListener('click', () => {
-    listpopups[i].classList.replace('show_mobile', 'hide_mobile');
-    listMobileSecs[i].classList.replace('hide_mobile', 'show_mobile');
-  });
-}
-
-
-
-// Generate PopUp Desktop Windows
-const popUpDeskList = document.querySelector('#popwindesktop');
-const popUpDeskTemplate = popUpDeskList.querySelector('div.interndesk');
-
-for (let i = 0; i < 2; i += 1) {
-  const clonedPopUpDesk = popUpDeskTemplate.cloneNode(true);
-  clonedPopUpDesk.id = projects[i].id;
-  const h2PopDesk = clonedPopUpDesk.querySelector('.poph2desk');
-  h2PopDesk.textContent = projects[i].name;
-
-  const project3Buttons = clonedPopUpDesk.querySelector('.b3popdesk');
-  for (let j = 0; j < projects[i].technologies.length; j += 1) {
-    const Button = document.createElement('button');
-    Button.className = 'sbuttonpopdesk';
-    Button.textContent = projects[i].technologies[j];
-    project3Buttons.appendChild(Button);
+function closepopup(version, id) {
+  const contentSection = document.querySelector('body div.hide_mobile');
+  contentSection.classList.replace('hide_mobile', 'show_mobile');
+  if (version === 'mobile') {
+    const projectpopupmobile = document.querySelector(`#${id}`);
+    projectpopupmobile.classList.replace('show_mobile', 'hide_mobile');
+    projectpopupmobile.parentNode.removeChild(projectpopupmobile);
+  } else {
+    const projectpopupdesktop = document.querySelector('#popwindesktop .show_desktop');
+    projectpopupdesktop.parentNode.removeChild(projectpopupdesktop);
+    const activepopupdesktop = document.querySelector('body div.show_desktop');
+    activepopupdesktop.classList.replace('show_desktop', 'hide_desktop');
   }
-
-  const projectImage = clonedPopUpDesk.querySelector('.popmaindesk');
-  projectImage.src = projects[i].featImage;
-  const pPopWinDesk = clonedPopUpDesk.querySelector('.popp1desk');
-  pPopWinDesk.textContent = projects[i].description;
-
-  const b1PopWinDesk = clonedPopUpDesk.querySelector('.popb1desk');
-  b1PopWinDesk.setAttribute('onclick', `window.location.href='${projects[i].liveLink}';`);
-  const b2PopWinDesk = clonedPopUpDesk.querySelector('.popb2desk');
-  b2PopWinDesk.setAttribute('onclick', `window.location.href='${projects[i].sourceLink}';`);
-
-  popUpDeskList.appendChild(clonedPopUpDesk);
 }
-
-const popupdesk1 = document.querySelector('#popwindesktop #project1');
-const popupdesk2 = document.querySelector('#popwindesktop #project2');
-const hiddendeskpop = document.querySelector('body div.hide_desktop');
-
-SeeButton.addEventListener('click', () => {
-  popupdesk1.classList.replace('hide_desktop', 'show_desktop');
-  MobileSec1.classList.replace('show_mobile', 'hide_mobile');
-  hiddendeskpop.classList.replace('hide_desktop', 'show_desktop');
-});
-
-SeeButton2.addEventListener('click', () => {
-  popupdesk2.classList.replace('hide_desktop', 'show_desktop');
-  MobileSec1.classList.replace('show_mobile', 'hide_mobile');
-  hiddendeskpop.classList.replace('hide_desktop', 'show_desktop');
-});
-
-// create event for close 'x' buttons of desktop popups
-const closedeskbutton1 = popupdesk1.querySelector('.popxdesk');
-const closedeskbutton2 = popupdesk2.querySelector('.popxdesk');
-
-const listclosedeskbuttons = [closedeskbutton1, closedeskbutton2];
-const listdeskpopups = [popupdesk1, popupdesk2];
-
-for (let i = 0; i < listclosedeskbuttons.length; i += 1) {
-  listclosedeskbuttons[i].addEventListener('click', () => {
-    listdeskpopups[i].classList.replace('show_desktop', 'hide_desktop');
-    MobileSec1.classList.replace('hide_mobile', 'show_mobile');
-    hiddendeskpop.classList.replace('show_desktop', 'hide_desktop');
-  });
-}
+closepopup();
