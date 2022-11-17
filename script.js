@@ -136,7 +136,7 @@ for (let i=0; i<projects.length; i++){
   }
   projectsList.appendChild(clonedprojectTemplate);
 }
-// generar pop-up window
+// generar pop-up window mobile
 const popUpList = document.querySelector('body section');
 const PopWinMobile = popUpList.querySelector('div.hide_mobile');
 
@@ -228,10 +228,125 @@ const closebutton5 = document.querySelector('#popwinmobile #project5 .popx');
 const listclosebuttons = [closebutton1, closebutton2, closebutton3, closebutton4, closebutton5];
 const listpopups = [popup1,popup2,popup3,popup4,popup5];
 const listMobileSecs = [MobileSec1,MobileSec2,MobileSec3,MobileSec4,MobileSec5];
-for (let i=0; i<5;i++){
+for (let i=0; i<listclosebuttons.length;i++){
   listclosebuttons[i].addEventListener('click', () => {
     
     listpopups[i].classList.replace('show_mobile','hide_mobile');
     listMobileSecs[i].classList.replace('hide_mobile', 'show_mobile');
 });
 }
+
+// version desktop
+
+// generar cards al cargar en desktop
+// const projectsTitledesk = document.querySelector('#projects-mobile h2');
+// projectsTitle.removeAttribute('class');
+// projectsTitle.style.display = 'block';
+// const projectsList = document.getElementById('projects-mobile');
+// const projectTemplate = document.querySelector('#projects-mobile section');
+
+// for (let i=0; i<projects.length; i++){
+//   const clonedprojectTemplate = projectTemplate.cloneNode(true);
+//   const projects1b3= clonedprojectTemplate.querySelector('.projects1b3')
+//   const projectImage = clonedprojectTemplate.querySelector('img');
+//   const projectTitle = clonedprojectTemplate.querySelector('.tittle3');
+//   const project3Buttons= clonedprojectTemplate.querySelector('.b3');
+//   const SeeButton = document.createElement('button');
+//   SeeButton.className="start1";
+//   SeeButton.textContent = "See this project →"
+//   SeeButton.setAttribute('data-target', "#".concat(projects[i].id));
+//   projects1b3.appendChild(SeeButton);
+//   clonedprojectTemplate.className = `show_mobile ${projects[i].id}`;
+//   projectImage.src = projects[i].featImage;
+//   projectTitle.textContent = projects[i].name;
+
+//   for (let j=0; j<projects[i].technologies.length; j++){
+//     const Button = document.createElement('button');
+//     Button.className="sbutton";
+//     Button.textContent=projects[i].technologies[j];
+//     project3Buttons.appendChild(Button);
+//   }
+//   projectsList.appendChild(clonedprojectTemplate);
+// }
+// // generar pop-up window en desktop
+// const popUpList = document.querySelector('body section');
+// const PopWinMobile = popUpList.querySelector('div.hide_mobile');
+
+//   for (let i=0; i<projects.length; i++){
+//   const clonedPopWinMobile = PopWinMobile.cloneNode(true);
+//   clonedPopWinMobile.id = projects[i].id;
+//   const h2PopWinMobile = clonedPopWinMobile.querySelector('.poph2');
+//   h2PopWinMobile.textContent = projects[i].name;
+
+//   const project3Buttons= clonedPopWinMobile.querySelector('.b3pop');
+
+
+//   for (let j=0; j<projects[i].technologies.length; j++){
+//     const Button = document.createElement('button');
+//     Button.className="sbuttonpop";
+//     Button.textContent=projects[i].technologies[j];
+//     project3Buttons.appendChild(Button);
+//   }
+  
+//   const projectImage = clonedPopWinMobile.querySelector('.popmain');
+//   projectImage.src = projects[i].featImage;
+//   const pPopWinMobile = clonedPopWinMobile.querySelector('.popp1');
+//   pPopWinMobile.textContent=projects[i].description;
+//   const b1PopWinMobile = clonedPopWinMobile.querySelector('.popb1');
+//   b1PopWinMobile.setAttribute('onclick',`window.location.href=\'${projects[i].liveLink}\';`);
+//   const b2PopWinMobile = clonedPopWinMobile.querySelector('.popb2');
+//   b2PopWinMobile.setAttribute('onclick',`window.location.href=\'${projects[i].sourceLink}\';`);
+//    popUpList.appendChild(clonedPopWinMobile);
+// }
+// const s1SeeProject=document.querySelector('.show_mobile.project1');
+// const b1SeeProject = s1SeeProject.querySelector('.start1');
+// const popup1 = document.getElementById('project1');
+// const MobileSec1 = document.querySelector('body div.show_mobile');
+
+// b1SeeProject.addEventListener('click', () => {
+ 
+//   popup1.classList.replace('hide_mobile', 'show_mobile');
+//   MobileSec1.classList.replace('show_mobile', 'hide_mobile');
+// });
+// const s2SeeProject=document.querySelector('.show_mobile.project2');
+// const b2SeeProject = s2SeeProject.querySelector('.start1');
+// const popup2 = document.getElementById('project2');
+// const MobileSec2 = document.querySelector('body div.show_mobile');
+
+// b2SeeProject.addEventListener('click', () => {
+ 
+//   popup2.classList.replace('hide_mobile', 'show_mobile');
+//   MobileSec2.classList.replace('show_mobile', 'hide_mobile');
+// });
+// const s3SeeProject=document.querySelector('.show_mobile.project3');
+// const b3SeeProject = s3SeeProject.querySelector('.start1');
+// const popup3 = document.getElementById('project3');
+// const MobileSec3 = document.querySelector('body div.show_mobile');
+
+// b3SeeProject.addEventListener('click', () => {
+ 
+//   popup3.classList.replace('hide_mobile', 'show_mobile');
+//   MobileSec3.classList.replace('show_mobile', 'hide_mobile');
+//  });
+
+// const s4SeeProject=document.querySelector('.show_mobile.project4');
+// const b4SeeProject = s4SeeProject.querySelector('.start1');
+// const popup4 = document.getElementById('project4');
+// const MobileSec4 = document.querySelector('body div.show_mobile');
+
+// b4SeeProject.addEventListener('click', () => {
+ 
+//   popup4.classList.replace('hide_mobile', 'show_mobile');
+//   MobileSec4.classList.replace('show_mobile', 'hide_mobile');
+// });
+
+// const s5SeeProject=document.querySelector('.show_mobile.project5');
+// const b5SeeProject = s5SeeProject.querySelector('.start1');
+// const popup5 = document.getElementById('project5');
+// const MobileSec5 = document.querySelector('body div.show_mobile');
+
+// b5SeeProject.addEventListener('click', () => {
+ 
+//   popup5.classList.replace('hide_mobile', 'show_mobile');
+//   MobileSec5.classList.replace('show_mobile', 'hide_mobile');
+

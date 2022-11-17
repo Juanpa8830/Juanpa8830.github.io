@@ -302,8 +302,16 @@ margin-top: 5%;
   
 }
 
-#popwindesktop {
+.hide_desktop {
   display: none;
+}
+
+.show_desktop {
+  display: initial;
+}
+
+#popwindesktop {
+  display: flex;
   background-color: #1a2236;
   padding: 5%;
 }
