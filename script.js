@@ -108,7 +108,7 @@ projectsList.innerHTML += '<h2 class="show_mobile" style="display:block">Project
 
 for (let i = 0; i < projects.length; i += 1) {
   const cardMobileTemplate = `
-  
+
   <section class="show_mobile ${projects[i].id}">
       <img class="lap1" src="${projects[i].featImage}" alt="">
         <div class="projects1b3">
@@ -160,7 +160,7 @@ const projectdeskcards = `
           <div class="b39">
           ${generateTechButtons(projects[1].technologies)}
           </div>
-          
+
           <button class="start1" onclick="showpopup('desktop','${projects[1].id}')">See this project →</button>
       </div>
   </div>
@@ -196,102 +196,106 @@ function generatepopTechButtons(technologies) {
 }
 
 // generar pop-up windows mobile/desktop
-function showpopup(version, id) {
-  const project = getproject(id);
-  const popuptemplates = {
-    mobile: `
-    <div class="hide_mobile" id="${project.id}">
-        <a class="popx" href="#" onclick="closepopup('mobile','${project.id}');">
-        <img src="./images/popupx.svg" alt=""></a>
-        <h2 class="poph2">${project.name}</h2>
+function showpopup(version=null, id=null) {
+  if (version !== null) {
+    const project = getproject(id);
+    const popuptemplates = {
+      mobile: `
+      <div class="hide_mobile" id="${project.id}">
+      <a class="popx" href="#" onclick="closepopup('mobile','${project.id}');">
+      <img src="./images/popupx.svg" alt=""></a>
+      <h2 class="poph2">${project.name}</h2>
 
-        <div class="projects1b3pop">
-            <ul class="b3pop">
+      <div class="projects1b3pop">
+      <ul class="b3pop">
+      ${generatepopTechButtons(project.technologies)}
+      </ul>
+
+      <img class="popmain" src="${project.featImage}" alt="">
+      <ul class="ima4pop">
+                <img class="little" src="./images/smalllappop.svg" alt="">
+                <img class="little" src="./images/smalllappop.svg" alt="">
+                <img class="little" src="./images/smalllappop.svg" alt="">
+                <img class="little" src="./images/smalllappop.svg" alt="">
+                </ul>
+
+                <p class="popp1">${project.description}</p>
+                <p class="popp2">Description of projects features and details.</p>
+
+                <button class="popb1" onclick="window.location.href='${project.liveLink}';">See Live</button>
+            <button class="popb2" onclick="window.location.href='${project.sourceLink}';">See Source</button>
+
+            </div>
+            </div>`,
+            desktop: `
+            <div class="interndesk hide_desktop id="${project.id}">
+            <div class="topdesk">
+            <h2 class="poph2desk">${project.name}</h2>
+            <a class="popxdesk" href="#" onclick="closepopup('desktop','${project.id}');"><img src="./images/deskcross.svg" alt=""></a>
+            </div>
+
+            <div class="projects1b3popdesk">
+            <ul class="b3popdesk">
             ${generatepopTechButtons(project.technologies)}
             </ul>
 
-            <img class="popmain" src="${project.featImage}" alt="">
-            <ul class="ima4pop">
-                <img class="little" src="./images/smalllappop.svg" alt="">
-                <img class="little" src="./images/smalllappop.svg" alt="">
-                <img class="little" src="./images/smalllappop.svg" alt="">
-                <img class="little" src="./images/smalllappop.svg" alt="">
+            <img class="popmaindesk" src="${project.featImage}" alt="">
+            <ul class="ima4popdesk">
+            <img class="littledesk" src="./images/littledesk.svg" alt="">
+            <img class="littledesk" src="./images/littledesk.svg" alt="">
+            <img class="littledesk" src="./images/littledesk.svg" alt="">
+            <img class="littledesk" src="./images/littledesk.svg" alt="">
             </ul>
 
-            <p class="popp1">${project.description}</p>
-            <p class="popp2">Description of projects features and details.</p>
-
-            <button class="popb1" onclick="window.location.href='${project.liveLink}';">See Live</button>
-            <button class="popb2" onclick="window.location.href='${project.sourceLink}';">See Source</button>
-
-        </div>
-    </div>`,
-    desktop: `
-      <div class="interndesk hide_desktop id="${project.id}">
-          <div class="topdesk">
-            <h2 class="poph2desk">${project.name}</h2>
-            <a class="popxdesk" href="#" onclick="closepopup('desktop','${project.id}');"><img src="./images/deskcross.svg" alt=""></a>
-          </div>
-
-      <div class="projects1b3popdesk">
-          <ul class="b3popdesk">
-          ${generatepopTechButtons(project.technologies)}
-          </ul>
-
-          <img class="popmaindesk" src="${project.featImage}" alt="">
-          <ul class="ima4popdesk">
-              <img class="littledesk" src="./images/littledesk.svg" alt="">
-              <img class="littledesk" src="./images/littledesk.svg" alt="">
-              <img class="littledesk" src="./images/littledesk.svg" alt="">
-              <img class="littledesk" src="./images/littledesk.svg" alt="">
-          </ul>
-
-          <p class="popp1desk">${project.description}</p>
-          <p class="popp2desk">Description of projects features and details.</p>
-          <div class="deskbuttons">
-              <button class="popb1desk" onclick="window.location.href='${project.liveLink}';">See Live</button>
-              <button class="popb2desk" onclick="window.location.href='${project.sourceLink}';">See Source</button>
-          </div>
-          <div class="deskbottomanchors">
-              <a class="anch1desk" href="#">previous project</a>
-              <a class="anch2desk" href="#">Next project</a>
-          </div>
+            <p class="popp1desk">${project.description}</p>
+            <p class="popp2desk">Description of projects features and details.</p>
+            <div class="deskbuttons">
+            <button class="popb1desk" onclick="window.location.href='${project.liveLink}';">See Live</button>
+            <button class="popb2desk" onclick="window.location.href='${project.sourceLink}';">See Source</button>
+            </div>
+            <div class="deskbottomanchors">
+            <a class="anch1desk" href="#">previous project</a>
+            <a class="anch2desk" href="#">Next project</a>
+            </div>
 
       </div>
-    </div>`,
-  };
-  const popUpmobileList = document.querySelector('body section');
-  const popUpDeskList = document.querySelector('#popwindesktop');
-  const contentSection = document.querySelector('body div.show_mobile');
+      </div>`,
+    };
+    const popUpmobileList = document.querySelector('body section');
+    const popUpDeskList = document.querySelector('#popwindesktop');
+    const contentSection = document.querySelector('body div.show_mobile');
 
-  contentSection.classList.replace('show_mobile', 'hide_mobile');
-  if (version === 'mobile') {
-    popUpmobileList.innerHTML += popuptemplates.mobile;
-    const projectpopupmobile = document.querySelector(`#${project.id}`);
-    projectpopupmobile.classList.replace('hide_mobile', 'show_mobile');
-  } else {
-    popUpDeskList.innerHTML += popuptemplates.desktop;
-    const projectpopupdesktop = document.querySelector('#popwindesktop .interndesk');
-    projectpopupdesktop.classList.replace('hide_desktop', 'show_desktop');
-    const activepopupdesktop = document.querySelector('body div.hide_desktop');
-    activepopupdesktop.classList.replace('hide_desktop', 'show_desktop');
+    contentSection.classList.replace('show_mobile', 'hide_mobile');
+    if (version === 'mobile') {
+      popUpmobileList.innerHTML += popuptemplates.mobile;
+      const projectpopupmobile = document.querySelector(`#${project.id}`);
+      projectpopupmobile.classList.replace('hide_mobile', 'show_mobile');
+    } else {
+      popUpDeskList.innerHTML += popuptemplates.desktop;
+      const projectpopupdesktop = document.querySelector('#popwindesktop .interndesk');
+      projectpopupdesktop.classList.replace('hide_desktop', 'show_desktop');
+      const activepopupdesktop = document.querySelector('body div.hide_desktop');
+      activepopupdesktop.classList.replace('hide_desktop', 'show_desktop');
+    }
   }
 }
 showpopup();
 
-// create event for close 'x' buttons of popups
-function closepopup(version, id) {
-  const contentSection = document.querySelector('body div.hide_mobile');
-  contentSection.classList.replace('hide_mobile', 'show_mobile');
-  if (version === 'mobile') {
-    const projectpopupmobile = document.querySelector(`#${id}`);
-    projectpopupmobile.classList.replace('show_mobile', 'hide_mobile');
-    projectpopupmobile.parentNode.removeChild(projectpopupmobile);
-  } else {
-    const projectpopupdesktop = document.querySelector('#popwindesktop .show_desktop');
-    projectpopupdesktop.parentNode.removeChild(projectpopupdesktop);
-    const activepopupdesktop = document.querySelector('body div.show_desktop');
-    activepopupdesktop.classList.replace('show_desktop', 'hide_desktop');
+  // create event for close 'x' buttons of popups
+function closepopup(version=null, id=null) {
+  if (version !== null) {
+    const contentSection = document.querySelector('body div.hide_mobile');
+    contentSection.classList.replace('hide_mobile', 'show_mobile');
+    if (version === 'mobile') {
+      const projectpopupmobile = document.querySelector(`#${id}`);
+      projectpopupmobile.classList.replace('show_mobile', 'hide_mobile');
+      projectpopupmobile.parentNode.removeChild(projectpopupmobile);
+    } else {
+      const projectpopupdesktop = document.querySelector('#popwindesktop .show_desktop');
+      projectpopupdesktop.parentNode.removeChild(projectpopupdesktop);
+      const activepopupdesktop = document.querySelector('body div.show_desktop');
+      activepopupdesktop.classList.replace('show_desktop', 'hide_desktop');
+    }
   }
 }
 closepopup();
