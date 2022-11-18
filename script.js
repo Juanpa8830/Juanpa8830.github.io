@@ -320,7 +320,7 @@ form.addEventListener('submit', (event) => {
 
 
 const dataName = document.getElementById('nombre');
-const dataTextArea = document.getElementById('textArea');
+const dataTextArea = document.getElementById('textarea');
 
 form.addEventListener('change', (event) => {
 const dataForm = {name: dataName.value, email: email.value, message: dataTextArea.value};
