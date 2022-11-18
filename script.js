@@ -196,7 +196,7 @@ function generatepopTechButtons(technologies) {
 }
 
 // generar pop-up windows mobile/desktop
-function showpopup(version=null, id=null) {
+function showpopup(version = null, id = null) {
   if (version !== null) {
     const project = getproject(id);
     const popuptemplates = {
@@ -227,7 +227,7 @@ function showpopup(version=null, id=null) {
 
             </div>
             </div>`,
-            desktop: `
+      desktop: `
             <div class="interndesk hide_desktop id="${project.id}">
             <div class="topdesk">
             <h2 class="poph2desk">${project.name}</h2>
@@ -281,8 +281,8 @@ function showpopup(version=null, id=null) {
 }
 showpopup();
 
-  // create event for close 'x' buttons of popups
-function closepopup(version=null, id=null) {
+// create event for close 'x' buttons of popups
+function closepopup(version = null, id = null) {
   if (version !== null) {
     const contentSection = document.querySelector('body div.hide_mobile');
     contentSection.classList.replace('hide_mobile', 'show_mobile');
