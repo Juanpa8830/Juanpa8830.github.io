@@ -89,7 +89,7 @@ const projects = [
   },
 ];
 
-// generate technologies buttons
+// generate cards technologies buttons
 function generateTechButtons(technologies) {
   const ButtonList = document.createElement('ul');
   for (let j = 0; j < technologies.length; j += 1) {
@@ -183,6 +183,19 @@ function getproject(id) {
   return false;
 }
 
+
+// generate popups technologies buttons
+function generatepopTechButtons(technologies) {
+  const ButtonList = document.createElement('ul');
+  for (let j = 0; j < technologies.length; j += 1) {
+    const Button = document.createElement('button');
+    Button.className = 'sbuttonpop';
+    Button.textContent = technologies[j];
+    ButtonList.appendChild(Button);
+  }
+  return ButtonList.innerHTML;
+}
+
 // generar pop-up windows mobile/desktop
 function showpopup(version, id) {
   const project = getproject(id);
@@ -195,7 +208,7 @@ function showpopup(version, id) {
 
         <div class="projects1b3pop">
             <ul class="b3pop">
-            ${generateTechButtons(project.technologies)}
+            ${generatepopTechButtons(project.technologies)}
             </ul>
 
             <img class="popmain" src="${project.featImage}" alt="">
@@ -223,7 +236,7 @@ function showpopup(version, id) {
 
       <div class="projects1b3popdesk">
           <ul class="b3popdesk">
-          ${generateTechButtons(project.technologies)}
+          ${generatepopTechButtons(project.technologies)}
           </ul>
 
           <img class="popmaindesk" src="${project.featImage}" alt="">
