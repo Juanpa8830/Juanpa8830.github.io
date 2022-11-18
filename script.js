@@ -299,3 +299,19 @@ function closepopup(version = null, id = null) {
   }
 }
 closepopup();
+
+// email form validation
+const errorMessage = document.getElementById('error_message');
+const email = document.getElementById('email');
+const form = document.querySelector('.form');
+
+form.addEventListener('submit', (event) => {
+  if (email.value.toLowerCase() === email.value) {
+    errorMessage.textContent = '';
+    errorMessage.style.display = 'none';
+  } else {
+    event.preventDefault();
+    errorMessage.textContent = 'Only LowerCase characters are allowed!!!';
+    errorMessage.style.display = 'inline-block';
+  }
+});
