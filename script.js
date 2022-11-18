@@ -183,7 +183,6 @@ function getproject(id) {
   return false;
 }
 
-
 // generate popups technologies buttons
 function generatepopTechButtons(technologies) {
   const ButtonList = document.createElement('ul');
