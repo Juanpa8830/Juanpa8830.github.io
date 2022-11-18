@@ -315,3 +315,15 @@ form.addEventListener('submit', (event) => {
     errorMessage.style.display = 'inline-block';
   }
 });
+
+// Local storage
+
+
+const dataName = document.getElementById('nombre');
+const dataTextArea = document.getElementById('textArea');
+
+form.addEventListener('change', (event) => {
+const dataForm = {name: dataName.value, email: email.value, message: dataTextArea.value};
+const stringDataForm = JSON.stringify(dataForm);
+
+localStorage.setItem('dataForm', stringDataForm);});
