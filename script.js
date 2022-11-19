@@ -331,8 +331,8 @@ form.addEventListener('change', () => {
 // On loading the page, the data is retrieved and it fills the form.
 window.addEventListener('load', () => {
   const checkDataForm = localStorage.getItem('dataForm');
-  const checkedDataForm = JSON.parse(checkDataForm);
-  dataName.value = checkedDataForm.name;
-  email.value = checkedDataForm.email;
-  dataTextArea.value = checkedDataForm.message;
+  
+  dataName.value = checkDataForm.name;
+  email.value = checkDataForm.email;
+  dataTextArea.value = checkDataForm.message;
 });
