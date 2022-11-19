@@ -316,14 +316,23 @@ form.addEventListener('submit', (event) => {
   }
 });
 
-// Local storage
-
-
+// Local storage feature
 const dataName = document.getElementById('nombre');
-const dataTextArea = document.getElementById('textArea');
+const dataTextArea = document.getElementById('textarea');
 
-form.addEventListener('change', (event) => {
-const dataForm = {name: dataName.value, email: email.value, message: dataTextArea.value};
-const stringDataForm = JSON.stringify(dataForm);
+// On any change at inputs in the form the data are saved
+form.addEventListener('change', () => {
+  const dataForm = { name: dataName.value, email: email.value, message: dataTextArea.value };
+  const stringDataForm = JSON.stringify(dataForm);
 
-localStorage.setItem('dataForm', stringDataForm);});
+  localStorage.setItem('dataForm', stringDataForm);
+});
+
+// On loading the page, the data is retrieved and it fills the form.
+window.addEventListener('load', () => {
+  const checkDataForm = localStorage.getItem('dataForm');
+  const checkedDataForm = JSON.parse(checkDataForm);
+  dataName.value = checkedDataForm.name;
+  email.value = checkedDataForm.email;
+  dataTextArea.value = checkedDataForm.message;
+});
